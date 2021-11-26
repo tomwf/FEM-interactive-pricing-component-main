@@ -31,7 +31,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Interactive pricing component](https://your-live-site-url.com)
+- Live Site URL: [Interactive pricing component](https://tomwf.github.io/FEM-interactive-pricing-component-main/)
 
 ## My process
 
