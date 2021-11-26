@@ -1,0 +1,256 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap");
+/********** Colors **********/
+/********** Primary **********/
+/********** Neutral **********/
+/********** Custom Variables **********/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-size: 15px;
+  font-family: "Manrope", sans-serif;
+  background: url("../images/bg-pattern.svg") center/cover no-repeat;
+}
+
+h1 {
+  color: #293356;
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+p {
+  font-size: 0.8rem;
+  line-height: 1.8;
+}
+
+p,
+li,
+span {
+  color: #858fad;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+ul {
+  list-style: none;
+  font-size: 0.7rem;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  background: url("../images/pattern-circles.svg") center/150px no-repeat;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+header h1,
+header p {
+  margin: 0.2em 0;
+}
+
+main {
+  padding: 0 1.5em;
+}
+main .card {
+  background-color: white;
+  border-radius: 0.5em;
+  box-shadow: 0 4px 8px rgba(128, 128, 128, 0.1);
+  max-width: 600px;
+  margin: 0 auto 5em auto;
+}
+main .card .simulator {
+  padding: 2.25em 1.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em;
+  border-bottom: 1px solid #eaeefb;
+}
+main .card .simulator .pageview {
+  letter-spacing: 2px;
+  font-weight: 600;
+  font-size: 0.75rem;
+}
+main .card .simulator .range__slider {
+  -webkit-appearance: none;
+  /* Override default look */
+  appearance: none;
+  background-color: #eaeefb;
+  height: 8px;
+  border-radius: 1em;
+  width: 100%;
+  -slider-filled-track-color: red;
+  cursor: pointer;
+  /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+}
+main .card .simulator .range__slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  /* Override default look */
+  background: #10d5c2 url("../images/icon-slider.svg") center/22px no-repeat;
+  width: 40px;
+  /* Set a specific slider handle width */
+  height: 40px;
+  /* Slider handle height */
+  border: none;
+  border-radius: 50%;
+  filter: drop-shadow(0 1.25em 0.75em #a5f3eb);
+}
+main .card .simulator .range__slider::-moz-range-thumb {
+  background: #10d5c2 url("../images/icon-slider.svg") center/22px no-repeat;
+  width: 40px;
+  /* Set a specific slider handle width */
+  height: 40px;
+  /* Slider handle height */
+  border: none;
+  border-radius: 50%;
+  filter: drop-shadow(0 1.25em 0.75em #a5f3eb);
+}
+main .card .simulator .range__slider::-moz-range-progress {
+  background-color: #a5f3eb;
+  height: 100%;
+  border-radius: 2em;
+}
+main .card .simulator p {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+main .card .simulator p .cost {
+  font-weight: 800;
+  font-size: 2rem;
+  color: #293356;
+  letter-spacing: initial;
+}
+main .card .simulator p .cost::before {
+  content: "$";
+}
+main .card .simulator .billing {
+  display: flex;
+  align-items: center;
+  font-size: 0.7rem;
+}
+main .card .simulator .billing .switch {
+  display: inline-block;
+  width: 43px;
+  height: 22px;
+  position: relative;
+  margin: 0 1em;
+  cursor: pointer;
+}
+main .card .simulator .billing .switch input {
+  opacity: 0;
+}
+main .card .simulator .billing .switch input:checked + .switch__slider {
+  background-color: #a5f3eb;
+}
+main .card .simulator .billing .switch input:checked + .switch__slider::before {
+  transform: translateX(21px);
+}
+main .card .simulator .billing .switch__slider {
+  background-color: #cdd7ee;
+  border-radius: 2em;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+main .card .simulator .billing .switch__slider::before {
+  content: "";
+  height: 14px;
+  width: 14px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  left: 4px;
+  top: 4px;
+  transition: 0.4s;
+}
+main .card .simulator .billing .discount {
+  background-color: #feece7;
+  color: #ff8c66;
+  display: inline-grid;
+  place-items: center;
+  width: 40px;
+  height: 19px;
+  border-radius: 2em;
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin-left: 0.5em;
+}
+main .card .trial {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 2em;
+  padding: 2.5em;
+}
+main .card .trial ul li:nth-child(2) {
+  margin: 1em 0;
+}
+main .card .trial ul li::before {
+  content: url("../images/icon-check.svg");
+  margin-right: 1.4em;
+}
+main .card .trial button {
+  padding: 1em;
+  width: 170px;
+  background-color: #293356;
+  color: #bdccff;
+  border-radius: 2em;
+}
+
+@media (min-width: 600px) {
+  header br {
+    display: none;
+  }
+
+  main .card .simulator {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    justify-items: center;
+  }
+  main .card .simulator .pageview {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    justify-self: flex-start;
+  }
+  main .card .simulator > p {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+  main .card .simulator .range__slider {
+    grid-column: 1/3;
+    grid-row: 2/3;
+  }
+  main .card .simulator .billing {
+    grid-column: 1/3;
+    grid-row: 3/4;
+  }
+  main .card .trial {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

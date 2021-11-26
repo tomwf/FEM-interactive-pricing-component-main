@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <!-- Custom stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+  <!-- Scripts -->
+  <script src="script.js" defer></script>
+  
+  <title>Frontend Mentor | Interactive pricing component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Simple, traffic-based pricing</h1>
+    <p>Sign-up for our 30-day trial.<br> No credit card required.</p>
+  </header>
+
+  <main>
+    <div class="card">
+      <div class="simulator">
+        <span class="pageview">100K PAGEVIEWS</span>
+        <input class="range__slider" type="range" min="0" max="4">
+        <p><span class="cost">16.00</span>/month</p>
+        <div class="billing">
+          <span>Monthly Billing</span>
+          <label class="switch">
+            <input type="checkbox">
+            <span class="switch__slider"></span>
+          </label>
+          <span>Yearly Billing</span>
+          <span class="discount">-25%</span>
+        </div>
+      </div>
+
+      <div class="trial">
+        <ul>
+          <li>Unlimited websites</li>
+          <li>100% data ownership</li>
+          <li>Email reports</li>
+        </ul>
+        <button>Start my trial</button>
+      </div>
+    </div>
+  </main>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Tomwf</a>.
+  </div>
+</body>
+</html>
